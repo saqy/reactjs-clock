@@ -1,0 +1,364 @@
+body {
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+#custom-timer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999999;
+    background-color: #1B242F;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#custom-timer h3 {
+    font-size: 30vw;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 2px 2px 0 #04c2c9, 
+    2px -2px 0 #04c2c9, -2px 2px 0 #04c2c9, 
+    -2px -2px 0 #04c2c9, 2px 0px 0 #04c2c9, 
+    0px 2px 0 #04c2c9, -2px 0px 0 #04c2c9, 0px -2px 0 #04c2c9;
+    color: #1B242F;
+    width: 100%;
+}
+.switch-btn {
+    padding: 15px 10px;
+    max-width: 220px;
+    width: 100%;
+    line-height: 1;
+    font-size: 20px;
+    color: #fff;
+    background: #04c2c9;
+    border: 1px solid #04c2c9;
+    cursor: pointer;
+    margin: 50px auto 0;
+}
+
+/* Analog CSS */
+#analog {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.logoText {
+    width: 70px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    display: block;
+}
+.logoText img {
+    width: 100%;
+}
+.logoText_bottom {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+.centerDot {
+    width: 15px;
+    height: 15px;
+    background: #04c2c9;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.hourLine {
+    height: 110px;
+    width: 5px;
+    background: #04c2c9;
+    border-radius: 7px;
+    position: absolute;
+    left: 48.8%;
+    top: 38px;
+    transform-origin: 54% 88px;
+    /* transform: rotate(45deg); */
+    z-index: 20;
+}
+.minsLine {
+    height: 120px;
+    width: 3px;
+    background: #04c2c9;
+    border-radius: 4px;
+    position: absolute;
+    left: 123px;
+    top: 28px;
+    transform-origin: 54% 98px;
+    /* transform: rotate(108deg); */
+    z-index: 10;
+}
+.secLine {
+    height: 125px;
+    width: 3px;
+    background: red;
+    border-radius: 4px;
+    position: absolute;
+    left: 123px;
+    top: 28px;
+    transform-origin: 54% 98px;
+    z-index: 1;
+}
+.fiveMins {
+    width: 3px;
+    height: 15px;
+    background: grey;
+    position: absolute;
+    left: 49%;
+    transform-origin: 50% 126px;
+}
+
+/* Five Mins CSS Start */
+.fiveMins:nth-child(2) {
+    transform: rotate(30deg);
+}
+.fiveMins:nth-child(3) {
+    transform: rotate(60deg);
+}
+.fiveMins:nth-child(4) {
+    transform: rotate(90deg);
+}
+.fiveMins:nth-child(5) {
+    transform: rotate(120deg);
+}
+.fiveMins:nth-child(6) {
+    transform: rotate(150deg);
+}
+.fiveMins:nth-child(7) {
+    transform: rotate(180deg);
+}
+.fiveMins:nth-child(8) {
+    transform: rotate(210deg);
+}
+.fiveMins:nth-child(9) {
+    transform: rotate(240deg);
+}
+.fiveMins:nth-child(10) {
+    transform: rotate(270deg);
+}
+.fiveMins:nth-child(11) {
+    transform: rotate(300deg);
+}
+.fiveMins:nth-child(12) {
+    transform: rotate(330deg);
+}
+/* Five Mins CSS End */
+
+
+/* Sec CSS Start */
+.sec {
+    width: 2px;
+    height: 7px;
+    background: #fff;
+    position: absolute;
+    left: 49%;
+    transform-origin: 50% 126px;
+}
+.sec:nth-child(5n + 5) {
+    opacity: 0;
+}
+.sec:nth-child(1) {
+    transform: rotate(6deg);
+}
+.sec:nth-child(2) {
+    transform: rotate(12deg);
+}
+.sec:nth-child(3) {
+    transform: rotate(18deg);
+}
+.sec:nth-child(4) {
+    transform: rotate(24deg);
+}
+.sec:nth-child(5) {
+    transform: rotate(30deg);
+}
+.sec:nth-child(6) {
+    transform: rotate(36deg);
+}
+.sec:nth-child(7) {
+    transform: rotate(42deg);
+}
+.sec:nth-child(8) {
+    transform: rotate(48deg);
+}
+.sec:nth-child(9) {
+    transform: rotate(54deg);
+}
+.sec:nth-child(10) {
+    transform: rotate(60deg);
+}
+.sec:nth-child(11) {
+    transform: rotate(66deg);
+}
+.sec:nth-child(12) {
+    transform: rotate(72deg);
+}
+.sec:nth-child(13) {
+    transform: rotate(78deg);
+}
+.sec:nth-child(14) {
+    transform: rotate(84deg);
+}
+.sec:nth-child(15) {
+    transform: rotate(90deg);
+}
+.sec:nth-child(16) {
+    transform: rotate(96deg);
+}
+.sec:nth-child(17) {
+    transform: rotate(102deg);
+}
+.sec:nth-child(18) {
+    transform: rotate(108deg);
+}
+.sec:nth-child(19) {
+    transform: rotate(114deg);
+}
+.sec:nth-child(20) {
+    transform: rotate(120deg);
+}
+.sec:nth-child(21) {
+    transform: rotate(126deg);
+}
+.sec:nth-child(22) {
+    transform: rotate(132deg);
+}
+.sec:nth-child(23) {
+    transform: rotate(138deg);
+}
+.sec:nth-child(24) {
+    transform: rotate(144deg);
+}
+.sec:nth-child(25) {
+    transform: rotate(150deg);
+}
+.sec:nth-child(26) {
+    transform: rotate(156deg);
+}
+.sec:nth-child(27) {
+    transform: rotate(162deg);
+}
+.sec:nth-child(28) {
+    transform: rotate(168deg);
+}
+.sec:nth-child(29) {
+    transform: rotate(174deg);
+}
+.sec:nth-child(30) {
+    transform: rotate(180deg);
+}
+.sec:nth-child(31) {
+    transform: rotate(186deg);
+}
+.sec:nth-child(32) {
+    transform: rotate(192deg);
+}
+.sec:nth-child(33) {
+    transform: rotate(198deg);
+}
+.sec:nth-child(34) {
+    transform: rotate(204deg);
+}
+.sec:nth-child(35) {
+    transform: rotate(210deg);
+}
+.sec:nth-child(36) {
+    transform: rotate(216deg);
+}
+.sec:nth-child(37) {
+    transform: rotate(222deg);
+}
+.sec:nth-child(38) {
+    transform: rotate(228deg);
+}
+.sec:nth-child(39) {
+    transform: rotate(234deg);
+}
+.sec:nth-child(40) {
+    transform: rotate(240deg);
+}
+.sec:nth-child(41) {
+    transform: rotate(246deg);
+}
+.sec:nth-child(42) {
+    transform: rotate(252deg);
+}
+.sec:nth-child(43) {
+    transform: rotate(258deg);
+}
+.sec:nth-child(44) {
+    transform: rotate(264deg);
+}
+.sec:nth-child(45) {
+    transform: rotate(270deg);
+}
+.sec:nth-child(46) {
+    transform: rotate(276deg);
+}
+.sec:nth-child(47) {
+    transform: rotate(282deg);
+}
+.sec:nth-child(48) {
+    transform: rotate(288deg);
+}
+.sec:nth-child(49) {
+    transform: rotate(294deg);
+}
+.sec:nth-child(50) {
+    transform: rotate(300deg);
+}
+.sec:nth-child(51) {
+    transform: rotate(306deg);
+}
+.sec:nth-child(52) {
+    transform: rotate(312deg);
+}
+.sec:nth-child(53) {
+    transform: rotate(318deg);
+}
+.sec:nth-child(54) {
+    transform: rotate(324deg);
+}
+.sec:nth-child(55) {
+    transform: rotate(330deg);
+}
+.sec:nth-child(56) {
+    transform: rotate(336deg);
+}
+.sec:nth-child(57) {
+    transform: rotate(342deg);
+}
+.sec:nth-child(58) {
+    transform: rotate(348deg);
+}
+.sec:nth-child(59) {
+    transform: rotate(354deg);
+}
+.sec:nth-child(60) {
+    transform: rotate(360deg);
+}
+/* Sec CSS End */
